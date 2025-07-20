@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <div class="navbar">
+    <button onclick="showSection('back')">🔙 Back</button>
+    <button onclick="showSection('about')">ℹ️ About</button>
+    <button onclick="showSection('credit')">👤 Credit</button>
+  </div>
+
+  <!-- Konten -->
+  <div class="container">
+    
+    <!-- BACK -->
+    <section id="back" class="section">
+      <h1>🎵 Spotify Song Search</h1>
+      <br/>
+      <h2>🔍 Cari Lagu di Spotify</h2>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Send Name Soong...">
+        <button onclick="search()">Search</button>
+      </div>
+      <div id="result"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" style="display:none;">
+      <h2>Tentang Website Ini</h2>
+      <p>
+        Situs ini adalah replika atau clone interface dari Spotify, yang dirancang untuk meniru tampilan dan pengalaman pengguna Spotify Web, dengan fokus pada fitur pencarian musik. Website ini dibuat menggunakan teknologi modern front-end dan kemungkinan besar mengandalkan Spotify Web API untuk mengambil data lagu, artis, dan album secara real-time.
+      </p>
+    </section>
+
+    <!-- CREDIT -->
+    <section id="credit" class="section" style="display:none;">
+      <h2>Credit</h2>
+      <p>Dibuat oleh: <strong>./Rʏ⊘</strong><br>Project pribadi dengan inspirasi dari Spotify Web API, <a href="https://t.me/Ryzxx7">Contact</a> .</p>
+    </section>
+
+  </div>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll(".section");
+      sections.forEach(section => section.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+
+  <script src="script.js"></script>
+  <script src="server.js"></script>
+</body>
+</html>
